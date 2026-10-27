@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "PokéSurvivor 自動代玩",
+  "version": "1.0.0",
+  "description": "本機版 PokéSurvivor 的自動代玩：閃避、撿東西、自動選卡、自動重開。只在本機模式運作，不上傳排行榜。",
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*", "file:///*"],
+      "js": ["autoplay.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ]
+}
